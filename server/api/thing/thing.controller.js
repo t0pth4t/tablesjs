@@ -14,9 +14,22 @@ var Thing = require('./thing.model');
 
 // Get list of things
 exports.index = function(req, res) {
+
+
   Thing.find(function (err, things) {
+    var tables = [
+      {name:'DataTables'},
+      {name:'uiTableFilter'},
+      {name:'Tablesorter'},
+      {name:'Scrollable HTML Table'},
+      {name:'Flexigrid'},
+      {name:'jQTreeTable'},
+      {name:'Ingrid'},
+      {name:'jQuery ColumnManager plugin'},
+      {name:'jQuery treeTable'}
+    ];
     if(err) { return handleError(res, err); }
-    return res.status(200).json(things);
+    return res.status(200).json(tables);
   });
 };
 

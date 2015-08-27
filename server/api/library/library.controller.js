@@ -30,7 +30,7 @@ var libraries = [
     src:'https://www.sencha.com/products/extjs/#overview'}
 ];
 
-// Get list of things
+// Get list of libraries
 exports.index = function(req, res) {
    res.status(200).json(libraries);
 };
@@ -39,7 +39,7 @@ exports.index = function(req, res) {
 exports.show = function(req, res) {
 
     var library = _.find(libraries, {name:req.params.name});
-    if(!thing) { return res.status(404).send('Not Found'); }
+    if(!library) { return res.status(404).send('Not Found'); }
     return res.json(library);
 
 };

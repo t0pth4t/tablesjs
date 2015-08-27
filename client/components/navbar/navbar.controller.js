@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('tablesjsApp')
-  .controller('NavbarCtrl', function ($scope, $location, $http) {
+  .controller('NavbarCtrl', function ($scope, $location) {
 
     $scope.menu = [{
       'title': 'Home',

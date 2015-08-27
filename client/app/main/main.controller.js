@@ -4,9 +4,10 @@ angular.module('tablesjsApp')
   .controller('MainCtrl', function ($scope, $http) {
     $scope.awesomeThings = [];
 
-    $http.get('/api/things').success(function(awesomeThings) {
-      $scope.awesomeThings = awesomeThings;
+    $http.get('/api/libraries').success(function(libraries) {
+      $scope.awesomeThings = libraries;
     });
+
 
     $scope.addThing = function() {
       if($scope.newThing === '') {

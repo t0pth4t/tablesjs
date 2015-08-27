@@ -2,9 +2,6 @@
 
 angular.module('tablesjsApp')
   .controller('NavbarCtrl', function ($scope, $location, $http) {
-    $http.get('/api/things').success(function(awesomeThings) {
-      $scope.menuItems = awesomeThings;
-    });
 
     $scope.menu = [{
       'title': 'Home',

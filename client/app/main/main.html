@@ -3,7 +3,7 @@
 <header class="hero-unit" id="banner">
   <div class="container">
     <h1>Tables.js</h1>
-    <p class="lead">Comparison of table/grid libraries in JavaScript</p>
+    <p class="lead">Comparison of JavaScript table/grid libraries</p>
   </div>
 </header>
 
@@ -18,14 +18,14 @@
 
     <div class="row text-center">
 
-      <div class="col-md-3 col-sm-6 hero-feature" ng-repeat="library in awesomeThings">
-        <div class="thumbnail">
+      <div class="col-md-3 col-sm-6 hero-feature"  ng-repeat="library in awesomeThings">
+        <div class="thumbnail" style="height:450px">
           <img ng-src="{{library.image}}" alt="" style="width:250px; height:150px">
           <div class="caption">
             <h3>{{library.name}}</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p>{{library.description}}</p>
             <p>
-              <a href="#" class="btn btn-primary">Demos</a> <a href="#" class="btn btn-default">More Info</a>
+              <a href="#" class="btn btn-primary">Demos</a> <a href="{{library.src}}" target="_blank" class="btn btn-default">More Info</a>
             </p>
           </div>
         </div>

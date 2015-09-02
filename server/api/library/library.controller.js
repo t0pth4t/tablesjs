@@ -12,6 +12,7 @@ var libraries = [
     name:'DataTables',
     src:'https://www.datatables.net/',
     image:'http://i.imgur.com/YUbiO1u.png',
+    features:['free','sorting','filtering','plugins'],
     description:'DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement, and will add advanced interaction controls to any HTML table.'
   },
   {

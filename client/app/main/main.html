@@ -1,56 +1,111 @@
+
+
 <div id="wrapper">
-  <div id="sidebar-wrapper">
-    <ul class="sidebar-nav">
-      <li class="sidebar-brand">
-        Filter
-      </li>
-      <li>
-        <input type="checkbox" ng-click="addFilter('free')"/>Free
-        <input type="checkbox" ng-click="addFilter('pay')"/>Pay
 
-      </li>
-    </ul>
-  </div>
-
-<header class="hero-unit" id="banner">
-  <div class="container-fluid">
-    <h1>Tables.js</h1>
-    <p class="lead">Comparison of JavaScript table/grid libraries</p>
-  </div>
-</header>
-
-  <div id="page-content-wrapper">
-<div class="container-fluid">
-  <div class="row">
-
-    <div class="row">
-      <div class="col-lg-12">
-        <h3>Latest Libraries</h3>
-      </div>
+  <!-- Navigation -->
+  <nav class="navbar  navbar-fixed-top" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <span class="navbar-brand"><i class="fa fa-table"></i> Tables.js</span>
     </div>
+    <!-- Top Menu Items -->
+    <ul class="nav navbar-right top-nav">
 
-    <div class="row text-center">
+    </ul>
+    <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav side-nav">
+        <li>
+        <a href="#"><i class="fa fa-usd fa-fw"></i> Cost</a>
+        <ul class="nav nav-second-level">
+        <li>
+        <label>
+        <input type="checkbox" ng-click="addFilter('free')"/>Free
+        </label>
 
-      <div class="col-md-3 col-sm-6 hero-feature"  ng-repeat="library in awesomeThings |filter:categoryFilter">
-        <div class="thumbnail" style="height:450px">
-          <img ng-src="{{library.image}}" alt="" style="width:250px; height:150px">
-          <div class="caption">
-            <h3>{{library.name}}</h3>
-            <p>{{library.description}}</p>
-            <p>
-              <a href="" class="btn btn-primary">Demo</a> <a href="{{library.src}}" target="_blank" class="btn btn-default">More Info</a>
-            </p>
-          </div>
+        </li>
+        <li>
+        <label>
+        <input type="checkbox" ng-click="addFilter('pay')"/>Pay
+        </label>
+        </li>
+        </ul>
+        <!-- /.nav-second-level -->
+        </li>
+        <li>
+        <a href="#"><i class="fa fa-wrench fa-fw"></i>Features</a>
+        <ul class="nav nav-second-level">
+        <li>
+        <label>
+        <input type="checkbox" ng-click="addFilter('pagination')"/>Pagination
+        </label>
+        </li>
+        <li>
+        <label>
+        <input type="checkbox" ng-click="addFilter('themeable')"/>Themeable
+        </label>
+        </li>
+        <li>
+        <label>
+        <input type="checkbox" ng-click="addFilter('row selection')"/>Row Selection
+        </label>
+        </li>
+        <li>
+        <label>
+        <input type="checkbox" ng-click="addFilter('jquery')"/>Requires jQuery
+        </label>
+        </li>
+        <li>
+        <label>
+        <input type="checkbox" ng-click="addFilter('sorting')"/>Sorting
+        </label>
+        </li>
+        </ul>
+        <!-- /.nav-second-level -->
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </nav>
+
+  <div id="page-wrapper">
+
+    <div class="container-fluid">
+
+      <!-- Page Heading -->
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="page-header">
+            Tables.js <small>Comparison of JavaScript Table/Grid Libraries</small>
+          </h1>
+
         </div>
       </div>
+      <!-- /.row -->
+
+
+      <div class="row text-center">
+        <div class="col-md-3 col-sm-6 hero-feature"  ng-repeat="library in awesomeThings |filter:categoryFilter" >
+        <div class="thumbnail" style="height:450px">
+        <img ng-src="{{library.image}}" alt="" style="width:250px; height:150px">
+        <div class="caption">
+        <h3>{{library.name}}</h3>
+        <p>{{library.description}}</p>
+        <p>
+        <a href="" class="btn btn-primary">Demo</a> <a href="{{library.src}}" target="_blank" class="btn btn-default">More Info</a>
+        </p>
+        </div>
+        </div>
+        </div>
+
+      </div>
+      <!-- /.row -->
 
     </div>
-
-    <hr>
+    <!-- /.container-fluid -->
 
   </div>
-  </div>
-
+  <!-- /#page-wrapper -->
 
 </div>
-</div>
+<!-- /#wrapper -->

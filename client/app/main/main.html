@@ -1,5 +1,16 @@
 <div id="wrapper">
-<div ng-include="'components/navbar/navbar.html'"></div>
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        Filter
+      </li>
+      <li>
+        <input type="checkbox" ng-click="addFilter('free')"/>Free
+        <input type="checkbox" ng-click="addFilter('pay')"/>Pay
+
+      </li>
+    </ul>
+  </div>
 
 <header class="hero-unit" id="banner">
   <div class="container-fluid">
@@ -7,6 +18,7 @@
     <p class="lead">Comparison of JavaScript table/grid libraries</p>
   </div>
 </header>
+
   <div id="page-content-wrapper">
 <div class="container-fluid">
   <div class="row">
@@ -19,7 +31,7 @@
 
     <div class="row text-center">
 
-      <div class="col-md-3 col-sm-6 hero-feature"  ng-repeat="library in awesomeThings">
+      <div class="col-md-3 col-sm-6 hero-feature"  ng-repeat="library in awesomeThings |filter:categoryFilter">
         <div class="thumbnail" style="height:450px">
           <img ng-src="{{library.image}}" alt="" style="width:250px; height:150px">
           <div class="caption">

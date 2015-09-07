@@ -1,5 +1,3 @@
-
-
 <div id="wrapper">
 
   <!-- Navigation -->
@@ -16,52 +14,57 @@
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav side-nav">
         <li>
-        <a href="#"><i class="fa fa-usd fa-fw"></i> Cost</a>
-        <ul class="nav nav-second-level">
-        <li>
-        <label>
-        <input type="checkbox" ng-click="addFilter('free')"/>Free
-        </label>
+          <a href="#"><i class="fa fa-usd fa-fw"></i> Cost</a>
+          <ul class="nav nav-second-level">
+            <li>
+              <label>
+                <input type="checkbox" ng-click="addFilter('free')" />Free
+              </label>
 
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" ng-click="addFilter('pay')" />Pay
+              </label>
+            </li>
+          </ul>
+          <!-- /.nav-second-level -->
         </li>
         <li>
-        <label>
-        <input type="checkbox" ng-click="addFilter('pay')"/>Pay
-        </label>
-        </li>
-        </ul>
-        <!-- /.nav-second-level -->
-        </li>
-        <li>
-        <a href="#"><i class="fa fa-wrench fa-fw"></i>Features</a>
-        <ul class="nav nav-second-level">
-        <li>
-        <label>
-        <input type="checkbox" ng-click="addFilter('pagination')"/>Pagination
-        </label>
-        </li>
-        <li>
-        <label>
-        <input type="checkbox" ng-click="addFilter('themeable')"/>Themeable
-        </label>
-        </li>
-        <li>
-        <label>
-        <input type="checkbox" ng-click="addFilter('row selection')"/>Row Selection
-        </label>
-        </li>
-        <li>
-        <label>
-        <input type="checkbox" ng-click="addFilter('jquery')"/>Requires jQuery
-        </label>
+          <a href="#"><i class="fa fa-wrench fa-fw"></i>Features</a>
+          <ul class="nav nav-second-level">
+            <li>
+              <label>
+                <input type="checkbox" ng-click="addFilter('pagination')" />Pagination
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" ng-click="addFilter('themeable')" />Themeable
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" ng-click="addFilter('row selection')" />Row Selection
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" ng-click="addFilter('sorting')" />Sorting
+              </label>
+            </li>
+          </ul>
+          <!-- /.nav-second-level -->
         </li>
         <li>
-        <label>
-        <input type="checkbox" ng-click="addFilter('sorting')"/>Sorting
-        </label>
-        </li>
-        </ul>
-        <!-- /.nav-second-level -->
+          <a href="#"><i class="fa fa-suitcase fa-fw"></i>Requirements</a>
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" ng-click="addFilter('jquery')" />jQuery
+              </label>
+            </li>
+          </ul>
         </li>
       </ul>
     </div>
@@ -83,19 +86,18 @@
       </div>
       <!-- /.row -->
 
-
       <div class="row text-center">
-        <div class="col-md-3 col-sm-6 hero-feature"  ng-repeat="library in awesomeThings |filter:categoryFilter" >
-        <div class="thumbnail" style="height:450px">
-        <img ng-src="{{library.image}}" alt="" style="width:250px; height:150px">
-        <div class="caption">
-        <h3>{{library.name}}</h3>
-        <p>{{library.description}}</p>
-        <p>
-        <a href="" class="btn btn-primary">Demo</a> <a href="{{library.src}}" target="_blank" class="btn btn-default">More Info</a>
-        </p>
-        </div>
-        </div>
+        <div class="col-md-3 col-sm-6 hero-feature" ng-repeat="library in awesomeThings |filter:categoryFilter">
+          <div class="thumbnail" style="height:450px">
+            <img ng-src="{{library.image}}" alt="" style="width:250px; height:150px">
+            <div class="caption">
+              <h3>{{library.name}}</h3>
+              <p>{{library.description}}</p>
+              <p>
+                <label>Size {{library.size}}</label> <a href="{{library.src}}" target="_blank" class="btn btn-default">More Info</a>
+              </p>
+            </div>
+          </div>
         </div>
 
       </div>
